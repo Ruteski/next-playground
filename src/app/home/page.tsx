@@ -1,13 +1,13 @@
-import {Container, Nome} from './styles'
-import axios from 'axios'
+import { Nome } from './styles';
+import axios from 'axios';
 
-export default async function Home(){
-  const response = await axios.get('https://api.github.com/users/ruteski')
-  const user = response.data
+export default async function Home() {
+  const response = await axios.get('https://api.github.com/users/ruteski');
+  const user = response.data;
 
   return (
-    <Container>
-      <h1>Bem vindo  - <Nome>{user.name}</Nome> </h1>
-    </Container>
-  )
+    <h1>
+      Bem vindo - <Nome>{user.name}</Nome>{' '}
+    </h1>
+  );
 }
